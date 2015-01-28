@@ -59,10 +59,27 @@ list3.extend([6, 88])
 len(list3)
 
 ## CONVERTING LISTS TO SERIES AND DATAFRAME
-list4 = range(5,10) ## range(n,m) give a list from n to m-1
+list4 = range(100,105) ## range(n,m) give a list from n to m-1
 list5 = range(5) ## gives list from 0 to m-1
-list5
+list6 = ['q','r','s','t','u']
+
+## list to series
+s1 = Series(list4)
+s2 = Series(list6)
+
+##create DataFrame from lists OR series
+list7 = range(60,65)
+zip(list4, list6, list7)
+zip1 = zip(list4, list6, list7)
+df1 = DataFrame(zip1)
+
+df2 = DataFrame(zip1, columns = ['two','apple',':)'])
+df3 = DataFrame(zip1, columns = [2,'two',':)'])
+df3[3:4]
+df3[['two',':)']][3:4]
 
 
+df4 = DataFrame({ ':(' : list4, 9 : list6}) ## dictionary objects have curly backets
 
-
+## creating DataFrame from series only
+df5 = pd.concat([s1, s2])
