@@ -75,4 +75,8 @@ df1.dropna(axis = 0, how = 'all') # drop ROWS with ALL missing values
 df.dropna(how = 'all') ## don't need to specify axis since it's default
 
 ## SEE ROWS WITH MISSING DATA -----------------------------
-df1.isnull()
+df3 = df.dropna(how = 'all')
+df3.head(10)
+df3['consump'].isnull()
+rows = df3['consump'].isnull()
+df3[rows]
